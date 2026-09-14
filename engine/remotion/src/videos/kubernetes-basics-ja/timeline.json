@@ -1,0 +1,123 @@
+{
+  "fps": 30,
+  "sample_rate": 24000,
+  "engine": "chatterbox",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "gap": 0.35,
+  "lead": 0.4,
+  "tail": 0.9,
+  "total_duration": 45.11,
+  "lines": [
+    {
+      "i": 0,
+      "text": "深夜、サーバーが落ちた。アプリは落ちなかった。",
+      "spoken": "深夜、サーバーが落ちた。アプリは落ちなかった。",
+      "audio": "line_00_4b46a7ec4c.wav",
+      "engine": "chatterbox",
+      "start": 0.4,
+      "end": 3.84,
+      "dur": 3.44
+    },
+    {
+      "i": 1,
+      "text": "それがクバネティス。アプリを動かし、止めない。",
+      "spoken": "それがクバネティス。アプリを動かし、止めない。",
+      "audio": "line_01_77fd3d7e72.wav",
+      "engine": "chatterbox",
+      "start": 4.19,
+      "end": 7.67,
+      "dur": 3.48
+    },
+    {
+      "i": 2,
+      "text": "この箱がポッド。コンテナに詰めたあなたのアプリ。",
+      "spoken": "この箱がポッド。コンテナに詰めたあなたのアプリ。",
+      "audio": "line_02_2260c106e0.wav",
+      "engine": "chatterbox",
+      "start": 8.02,
+      "end": 12.03,
+      "dur": 4.01
+    },
+    {
+      "i": 3,
+      "text": "ポッドはノードで動く。ノードはただのマシン。",
+      "spoken": "ポッドはノードで動く。ノードはただのマシン。",
+      "audio": "line_03_4534fdab33.wav",
+      "engine": "chatterbox",
+      "start": 12.38,
+      "end": 15.87,
+      "dur": 3.49
+    },
+    {
+      "i": 4,
+      "text": "ノードを束ねたものがクラスター。",
+      "spoken": "ノードを束ねたものがクラスター。",
+      "audio": "line_04_6ac730081a.wav",
+      "engine": "chatterbox",
+      "start": 16.22,
+      "end": 18.32,
+      "dur": 2.1
+    },
+    {
+      "i": 5,
+      "text": "コントロールプレーンは頭脳。あなたは望みを伝えるだけ。",
+      "spoken": "コントロールプレーンは、ずのう。あなたは、望みを伝えるだけ。",
+      "audio": "line_05_df7d5fc348.wav",
+      "engine": "chatterbox",
+      "start": 18.67,
+      "end": 23.46,
+      "dur": 4.79
+    },
+    {
+      "i": 6,
+      "text": "3個欲しいと言えば、ポッドを3個起動する。",
+      "spoken": "3個欲しいと言えば、ポッドを3個起動する。",
+      "audio": "line_06_4d59d465f9.wav",
+      "engine": "chatterbox",
+      "start": 23.81,
+      "end": 27.52,
+      "dur": 3.71
+    },
+    {
+      "i": 7,
+      "text": "ポッドが1個死ぬと、気づいて、もう1個起動する。",
+      "spoken": "ポッドが1個死ぬと、気づいて、もう1個起動する。",
+      "audio": "line_07_f2731efeee.wav",
+      "engine": "chatterbox",
+      "start": 27.87,
+      "end": 31.45,
+      "dur": 3.58
+    },
+    {
+      "i": 8,
+      "text": "アクセスが急増？3を10に変える。7個追加される。",
+      "spoken": "アクセスが急増？3を10に変える。なな個追加される。",
+      "audio": "line_08_6a5dbb1486.wav",
+      "engine": "chatterbox",
+      "start": 31.8,
+      "end": 36.54,
+      "dur": 4.74
+    },
+    {
+      "i": 9,
+      "text": "サービスが窓口。ポッドたちにひとつの固定アドレス。",
+      "spoken": "サービスが窓口。ポッドたちにひとつの固定アドレス。",
+      "audio": "line_09_e13c715c20.wav",
+      "engine": "chatterbox",
+      "start": 36.89,
+      "end": 40.68,
+      "dur": 3.79
+    },
+    {
+      "i": 10,
+      "text": "望みを伝えるだけ。クバネティスが保つ。",
+      "spoken": "望みを伝えるだけ。クバネティスが保つ。",
+      "audio": "line_10_88013178ca.wav",
+      "engine": "chatterbox",
+      "start": 41.03,
+      "end": 44.21,
+      "dur": 3.18
+    }
+  ]
+}
