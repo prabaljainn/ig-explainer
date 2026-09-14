@@ -1,0 +1,37 @@
+# toolchain
+node_modules/
+.venv/
+.venv-clone/
+__pycache__/
+.DS_Store
+media/
+engine/remotion/public/*
+!engine/remotion/public/.gitkeep
+
+# generated per video (narration, renders, critic frames); the pipeline recreates them
+videos/*/audio/
+videos/*/out/
+videos/*/critic/
+videos/*/manim/media/
+!videos/_example/out/
+videos/_example/out/*.mp4
+
+# personal: voice recordings are never a public asset
+brand/voice/
+
+# videos that never go public: anything under videos/_private-*/ (both halves; the Remotion registry only sees
+# what exists), plus this checkout's own list
+videos/_private-*/
+engine/remotion/src/videos/_private-*/
+videos/portc-*/
+engine/remotion/src/videos/portc-*/
+
+# secrets and local config, never
+.env
+.env.*
+*.local.json
+.mcp.json
+.netrc
+.npmrc
+*.pem
+*.key

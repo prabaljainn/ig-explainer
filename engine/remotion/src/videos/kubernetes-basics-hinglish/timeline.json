@@ -1,0 +1,123 @@
+{
+  "fps": 30,
+  "sample_rate": 24000,
+  "engine": "chatterbox",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "gap": 0.35,
+  "lead": 0.4,
+  "tail": 0.9,
+  "total_duration": 44.15,
+  "lines": [
+    {
+      "i": 0,
+      "text": "3 baje server crash hua. App down nahi hua.",
+      "spoken": "रात 3 बजे server crash हुआ। App down नहीं हुआ।",
+      "audio": "line_00_a939683f0a.wav",
+      "engine": "chatterbox",
+      "start": 0.4,
+      "end": 5.85,
+      "dur": 5.45
+    },
+    {
+      "i": 1,
+      "text": "Yehi hai Kubernetes. Apps chalti rehti hain.",
+      "spoken": "यही है Kubernetes। Apps चलती रहती हैं।",
+      "audio": "line_01_e7d8dbcb5d.wav",
+      "engine": "chatterbox",
+      "start": 6.2,
+      "end": 9.72,
+      "dur": 3.52
+    },
+    {
+      "i": 2,
+      "text": "Har box ek pod hai: aapka app, container mein.",
+      "spoken": "हर box एक pod है: आपका app, container में।",
+      "audio": "line_02_b4432bb3c7.wav",
+      "engine": "chatterbox",
+      "start": 10.07,
+      "end": 13.44,
+      "dur": 3.37
+    },
+    {
+      "i": 3,
+      "text": "Pods nodes par chalte hain. Node, bas ek machine.",
+      "spoken": "Pods, nodes पर चलते हैं। Node, बस एक machine।",
+      "audio": "line_03_410124d2b9.wav",
+      "engine": "chatterbox",
+      "start": 13.79,
+      "end": 18.29,
+      "dur": 4.5
+    },
+    {
+      "i": 4,
+      "text": "Kai nodes milkar ek cluster.",
+      "spoken": "कई nodes मिलकर एक cluster।",
+      "audio": "line_04_9ce0bf96ea.wav",
+      "engine": "chatterbox",
+      "start": 18.64,
+      "end": 20.75,
+      "dur": 2.11
+    },
+    {
+      "i": 5,
+      "text": "Control plane dimaag hai. Aap batao kya chahiye.",
+      "spoken": "Control plane दिमाग़ है। आप बताओ, क्या चाहिए।",
+      "audio": "line_05_bcdabc2899.wav",
+      "engine": "chatterbox",
+      "start": 21.1,
+      "end": 24.94,
+      "dur": 3.84
+    },
+    {
+      "i": 6,
+      "text": "Bolo 3 chahiye. Wo 3 pods start karta hai.",
+      "spoken": "बोलो 3 चाहिए। वो 3 pods start करता है।",
+      "audio": "line_06_bc6f7b83f4.wav",
+      "engine": "chatterbox",
+      "start": 25.29,
+      "end": 28.33,
+      "dur": 3.04
+    },
+    {
+      "i": 7,
+      "text": "Ek pod mara? Notice karke naya start karta hai.",
+      "spoken": "एक pod मरा? नोटिस करके नया start करता है।",
+      "audio": "line_07_dda607c7cc.wav",
+      "engine": "chatterbox",
+      "start": 28.68,
+      "end": 31.93,
+      "dur": 3.25
+    },
+    {
+      "i": 8,
+      "text": "Traffic badha? 3 ko 10 karo. 7 aur add.",
+      "spoken": "Traffic बढ़ा? 3 को 10 करो। 7 और add।",
+      "audio": "line_08_ced698b603.wav",
+      "engine": "chatterbox",
+      "start": 32.28,
+      "end": 35.87,
+      "dur": 3.59
+    },
+    {
+      "i": 9,
+      "text": "Service inhe ek stable address deti hai.",
+      "spoken": "Service, इन्हें एक stable address देती है।",
+      "audio": "line_09_d77d8d51e0.wav",
+      "engine": "chatterbox",
+      "start": 36.22,
+      "end": 39.24,
+      "dur": 3.02
+    },
+    {
+      "i": 10,
+      "text": "Bas batao kya chahiye. Kubernetes sambhalega.",
+      "spoken": "[hi]बस बताओ क्या चाहिए। [en]Kubernetes [hi]संभालेगा।",
+      "audio": "line_10_a3b044cea3.wav",
+      "engine": "chatterbox",
+      "start": 39.59,
+      "end": 43.25,
+      "dur": 3.66
+    }
+  ]
+}

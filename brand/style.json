@@ -1,0 +1,42 @@
+{
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "colors": {
+    "bg": "#000000",
+    "fg": "#FFFFFF",
+    "dim": "#8C8C8C",
+    "faint": "#3A3A3A",
+    "accent": null
+  },
+  "font": {
+    "family": "Instrument Sans",
+    "fallback": [
+      "Helvetica Neue",
+      "Arial",
+      "sans-serif"
+    ],
+    "display": 112,
+    "headline": 76,
+    "body": 52,
+    "caption": 46,
+    "label": 36,
+    "family_ja": "Noto Sans JP"
+  },
+  "stroke": 6,
+  "safe": {
+    "top": 260,
+    "bottom": 340,
+    "side": 72
+  },
+  "caption": {
+    "y": 1420,
+    "maxWidth": 900
+  },
+  "notes": {
+    "accent": "null means monochrome. Set one hex per video only when a single quantity must be tracked across scenes.",
+    "safe": "Instagram Reels overlays cover roughly the top 260px and bottom 340px of a 1080x1920 frame. Nothing that must be read goes there.",
+    "font": "Manim uses whatever is installed system-wide under this name. Remotion loads it from Google Fonts. Install locally for identical output.",
+    "font_ja": "Japanese videos load Noto Sans JP (engine/remotion/src/videos/<slug>/index.tsx) because Instrument Sans has no CJK glyphs. Same weights, same sizes; keep headline lines to 12 full-width characters."
+  }
+}

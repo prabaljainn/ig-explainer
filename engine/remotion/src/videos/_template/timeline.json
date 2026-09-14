@@ -1,0 +1,103 @@
+{
+  "fps": 30,
+  "sample_rate": 24000,
+  "engine": "placeholder",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "gap": 0.35,
+  "lead": 0.4,
+  "tail": 0.9,
+  "total_duration": 37.25,
+  "lines": [
+    {
+      "i": 0,
+      "text": "How did someone measure the Earth 2,200 years ago with a stick?",
+      "start": 0.4,
+      "end": 4.0,
+      "dur": 3.6,
+      "audio": "line_00_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 1,
+      "text": "At noon in Syene, the sun stood straight overhead. No shadow.",
+      "start": 4.35,
+      "end": 7.65,
+      "dur": 3.3,
+      "audio": "line_01_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 2,
+      "text": "The same day in Alexandria, a vertical stick cast a short shadow.",
+      "start": 8.0,
+      "end": 11.5,
+      "dur": 3.5,
+      "audio": "line_02_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 3,
+      "text": "The shadow gave the sun's angle from vertical: about 7.2 degrees.",
+      "start": 11.85,
+      "end": 15.45,
+      "dur": 3.6,
+      "audio": "line_03_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 4,
+      "text": "Sun rays are parallel, so that angle also sits at Earth's center.",
+      "start": 15.8,
+      "end": 19.5,
+      "dur": 3.7,
+      "audio": "line_04_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 5,
+      "text": "7.2 degrees is one fiftieth of a full circle.",
+      "start": 19.85,
+      "end": 22.75,
+      "dur": 2.9,
+      "audio": "line_05_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 6,
+      "text": "The two cities were about 800 kilometers apart.",
+      "start": 23.1,
+      "end": 25.9,
+      "dur": 2.8,
+      "audio": "line_06_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 7,
+      "text": "Fifty of those arcs make the whole circumference.",
+      "start": 26.25,
+      "end": 29.15,
+      "dur": 2.9,
+      "audio": "line_07_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 8,
+      "text": "That gives 40,000 kilometers. The true value is 40,075.",
+      "start": 29.5,
+      "end": 32.9,
+      "dur": 3.4,
+      "audio": "line_08_placeholder.wav",
+      "engine": "placeholder"
+    },
+    {
+      "i": 9,
+      "text": "One shadow, one angle, and geometry did the rest.",
+      "start": 33.25,
+      "end": 36.35,
+      "dur": 3.1,
+      "audio": "line_09_placeholder.wav",
+      "engine": "placeholder"
+    }
+  ]
+}
