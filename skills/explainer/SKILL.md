@@ -27,8 +27,9 @@ outside that directory, so load it by hand, every time.
    diagram is. Put both in `BRIEF.md`. If the engine was not given, choose it per "Engine choice" and say why.
 5. Run every command as `cd "$ROOT" && ...`. Python is `$ROOT/.venv/bin/python` (Kokoro, default) or
    `$ROOT/.venv-clone/bin/python` (`--engine chatterbox`), never the system python3.
-6. Non-default voice or language (Hindi, Hinglish, Japanese, the user's own voice): read `$ROOT/README.md`
-   sections "Voice" and "Other languages" first.
+6. Non-default voice or language (Hindi, Hinglish, Japanese, the user's own voice): read `$ROOT/docs/voice.md`
+   first. It has the flags, the `caption || spoken` and `[hi]`/`[en]` syntax, the reference-clip recording
+   command and the `voice-critic` invocation.
 7. Invoke the `video-critic` subagent with the root, the slug and the round number; loop per CLAUDE.md step 7.
    Cloned narration gets `voice-critic` the same way, one at a time. If `video-critic` is not in your agent list
    (agents load at session start), run a general-purpose agent with the full text of

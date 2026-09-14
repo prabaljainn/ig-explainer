@@ -63,7 +63,8 @@ Restart Claude Code, then from **any** directory:
 
 `install.sh` checks your prerequisites first, builds the Python environment, installs the render engine, and links
 the skill and both critic agents into `~/.claude`. It ends with a readiness report that names the fix for anything
-missing. A clean install takes about 75 seconds.
+missing. A clean install takes about a minute once pip has PyTorch cached; the very first one downloads it, so
+give it longer before assuming it has hung.
 
 **Requirements:** macOS or Linux, `ffmpeg`, Node 20+, Python 3.10–3.12, and `espeak-ng`
 (`brew install espeak-ng` / `sudo apt install espeak-ng`).
@@ -116,6 +117,9 @@ step is judgement, not pixels.
 | **Other languages** | Hindi, Japanese and 20 more, including Hinglish code-mixing where the caption and the spoken form differ per line |
 | **Hosted** | Gemini TTS, optional, for expressive delivery |
 
+**[Full voice and language reference →](docs/voice.md)** covers every flag, the `caption || spoken` per-line
+syntax, per-phrase `[hi]`/`[en]` tags, recording a reference clip, and running the pipeline by hand.
+
 Non-Latin scripts get their own typeface slice, and captions break at punctuation or word boundaries rather than
 mid-compound. `videos/kubernetes-basics` ships in English, Japanese and Hinglish from one shared composition, so a
 translation is a new script and a re-render, not a new video.
@@ -130,6 +134,7 @@ skills/explainer/reference/      what the critic docks points for; hard-won tool
 .claude/agents/voice-critic.md   the same gate for cloned narration
 brand/style.json                 colours, type sizes, safe zones, fps: the only place they live
 tools/                           narration, mux, frame sampling, scaffolding, preflight
+docs/voice.md                    voices, languages, cloning, manual operation, troubleshooting
 engine/remotion/                 compositions, auto-discovered from src/videos/<slug>/
 engine/manim/                    IGScene base class and a template scene
 videos/_example/                 the worked example above, brief and script included

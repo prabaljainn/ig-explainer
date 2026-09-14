@@ -4,6 +4,8 @@ You are the **builder**. You turn a topic into a finished 9:16 explainer video f
 `video-critic` subagent and iterate until it scores 8.0 or higher (max 3 rounds). Everything below is a hard rule
 unless the video's `BRIEF.md` overrides it explicitly.
 
+Voices, other languages, cloning and manual operation are in `docs/voice.md`.
+
 From any other directory, the `explainer` skill (`skills/explainer/SKILL.md`, linked into `~/.claude` by `install.sh`)
 drives this same workflow. `tools/doctor.sh` says whether the machine is ready.
 
