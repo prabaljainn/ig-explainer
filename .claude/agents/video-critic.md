@@ -16,11 +16,18 @@ root; start every Bash command with `cd <root> &&`, the caller may be in another
 
 1. The video is `videos/<slug>/out/final.mp4`, the script is
    `videos/<slug>/script.md`, the brief is `videos/<slug>/BRIEF.md`, tokens are `brand/style.json`.
-2. Run `tools/frames.sh videos/<slug>/out/final.mp4 videos/<slug>/critic/round_<N>_frames 10`.
-3. Read `sheet.png` first for overall consistency, then read every individual frame at full size. Read the script
+2. Run `.venv/bin/python tools/check.py videos/<slug>` first. It is the deterministic gate: output contract,
+   script rules, dead holds, discontinuities at narration line starts, colour left under the takeaway. Take its
+   output as given and do not re-derive it or spend an issue on anything it already reports as a FAIL - your
+   value is judgement, not arithmetic. If it prints a FAIL, say so in the verdict: the builder skipped the gate.
+3. Run `tools/frames.sh videos/<slug>/out/final.mp4 videos/<slug>/critic/round_<N>_frames 10`.
+4. Read `sheet.png` first for overall consistency, then read every individual frame at full size. Read the script
    so you can judge whether each frame shows what the narration says at that moment (frame filenames carry the
    timestamp; `videos/<slug>/audio/timeline.json` has each line's start and end).
-4. Check the mux summary: `ffprobe -v error -show_entries stream=width,height,codec_name -of default=nw=1:nk=1 videos/<slug>/out/final.mp4`.
+5. Spend your issues on what only eyes settle: does the motion demonstrate the claim the line makes, is the
+   diagram still the hero, does the hook earn a stop, is a colour doing a job it was not given. Measure freely
+   with ffprobe when it sharpens an issue, but the resolution, duration, holds and line-boundary cuts are
+   already decided by step 2.
 
 ## Rubric
 
@@ -34,8 +41,12 @@ Score each category 0 to 10, then compute the weighted total. Report one decimal
 - **Correctness (25%)**: the visual at each timestamp shows what the narration line says; diagrams are
   geometrically right (angles, proportions, directions); numbers on screen match the script; no scene appears
   early or late relative to its line.
-- **Consistency (15%)**: same typeface, weights, stroke width and palette throughout; true black background;
-  monochrome unless the brief names an accent; no leftover template placeholder content.
+- **Consistency (15%)**: same typeface, weights, stroke width and palette throughout; true black ground with the
+  house starfield behind every scene. Colour follows its role and nothing else takes colour: `hero` only on the
+  object the video is about (and it is the only thing that glows, only while it is the subject), `mark` only on
+  annotation arrows and their callouts, `badge` only on numbered chips and ticks in a real sequence. Diagram
+  strokes, headlines and captions stay white or dim. A per-video `accent` is allowed only if the brief names it.
+  No leftover template placeholder content.
 - **Hook and pacing (10%)**: the first frame at 0.4s already shows something worth stopping for; the takeaway
   frame stands alone; no long empty holds; no visual noise unrelated to the current line.
 
@@ -44,6 +55,7 @@ Hard caps, applied after weighting:
 - Any readable content inside the unsafe top or bottom band: cap at 6.5.
 - Any frame that contradicts the narration (wrong diagram for the line): cap at 6.5.
 - Placeholder text or template content visible: cap at 5.0.
+- A role colour used outside its role, or anything but the hero glowing: cap at 7.0.
 - Not 1080x1920, or no audio stream: 0.0.
 
 8.0 and above means you would publish this on a professional educational account as-is. Do not give 8.0 to

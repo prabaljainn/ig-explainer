@@ -11,7 +11,10 @@ export const Captions: React.FC<{ tl: Timeline; hide?: number[] }> = ({ tl, hide
   const { t, fps } = useT();
   const line = [...tl.lines].reverse().find((l) => t >= l.start);
   if (!line || hide.includes(line.i)) return null;
-  const p = easeOut(clamp01(((t - line.start) * fps) / 6));
+  // fade in over 6 frames, and out just before the next line starts: without the second half the outgoing
+  // caption vanishes on one frame while the incoming appears, which is a hard cut at every line boundary
+  const next = tl.lines[line.i + 1];
+  const p = easeOut(clamp01(((t - line.start) * fps) / 6)) * (next ? clamp01((next.start - t) / 0.13) : 1);
   return (
     <div style={{ position: "absolute", left: 0, right: 0, top: STYLE.caption.y, display: "flex", justifyContent: "center" }}>
       <div

@@ -1,5 +1,10 @@
 # What the critic docks points for
 
+`.venv/bin/python tools/check.py videos/<slug>` now decides the mechanical half of this list in four seconds:
+the output contract, the script rules, dead holds, discontinuities at narration line starts, and colour left
+under the takeaway. Run it until it prints `0 FAIL` before you look at a single frame. What follows is what it
+cannot decide.
+
 Each item below has cost a critic round on a real video. Check them against the self-check contact sheet
 (`tools/frames.sh`) before invoking `video-critic`; all of them are cheap before round 1 and expensive after.
 
@@ -22,6 +27,20 @@ Each item below has cost a critic round on a real video. Check them against the 
   inside contradicts the line (cap 6.5).
 - A moving accent object must not share a y-band with a static label (cap 6.0).
 - Labels beside a moving object wait until it has settled; a label left floating after its object moved gets flagged.
+
+## Colour and glow
+- The starfield is behind everything and is never the subject. If a frame reads as "stars plus text", the diagram
+  is missing, not quiet.
+- Only the hero glows, and only while its line is the subject. A glow left on while the narration has moved to
+  another object reads as the wrong thing being emphasised.
+- `mark` (annotation ink) never draws part of the diagram, and `badge` never appears when the content is not a
+  sequence or a checklist. A role colour outside its role caps at 7.0.
+- Glow bleeds: keep about 60 px between a glowing hero and any text, or the bloom eats the text's contrast.
+- The takeaway ghosts the diagram to near-black, which was tuned against an empty ground. Render the last second
+  and look: if the dust is brighter than the ghost, the takeaway reads as "stars plus text". Dim the field for
+  that scene (`<Stage stars={0.4}>`) rather than brightening the ghost, which would fight the headline.
+- A `Pop` entrance still has to land before the line's next beat. An overshoot that is still settling while the
+  next element arrives reads as jitter.
 
 ## Diagram
 - Labels need a colour rule: white while the object is the subject of the current line, dim from the next line on.

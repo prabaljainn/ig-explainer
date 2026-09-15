@@ -20,7 +20,8 @@ outside that directory, so load it by hand, every time.
 
    If doctor prints MISSING, stop and show the user the fix lines. Do not install system packages yourself.
 2. Read `$ROOT/CLAUDE.md` in full. It is the rulebook: output contract, look, engine choice, script rules,
-   workflow, discipline. Follow its Workflow section in order, without skipping the self-check in step 5.
+   workflow, discipline. Follow its Workflow section in order, without skipping the machine gate in step 5 or
+   the self-check in step 6.
 3. Read `reference/critic-patterns.md` and `reference/toolchain-notes.md` beside this file. The first is what the
    critic reliably docks points for: check it against the contact sheet before invoking the critic.
 4. Before writing the script, decide in two sentences what the one surprising idea is and what the single hero
@@ -30,7 +31,9 @@ outside that directory, so load it by hand, every time.
 6. Non-default voice or language (Hindi, Hinglish, Japanese, the user's own voice): read `$ROOT/docs/voice.md`
    first. It has the flags, the `caption || spoken` and `[hi]`/`[en]` syntax, the reference-clip recording
    command and the `voice-critic` invocation.
-7. Invoke the `video-critic` subagent with the root, the slug and the round number; loop per CLAUDE.md step 7.
+7. Invoke the `video-critic` subagent with the root, the slug and the round number; loop per CLAUDE.md step 8.
+   Never invoke it while `tools/check.py` still prints a FAIL: the critic is slow and expensive, and it will
+   spend a round telling you what the gate already told you for free.
    Cloned narration gets `voice-critic` the same way, one at a time. If `video-critic` is not in your agent list
    (agents load at session start), run a general-purpose agent with the full text of
    `$ROOT/.claude/agents/video-critic.md` as its instructions, and give it the root, slug and round.

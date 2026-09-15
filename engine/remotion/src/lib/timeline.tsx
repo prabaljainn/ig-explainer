@@ -6,6 +6,11 @@ export type Timeline = { fps: number; total_duration: number; lines: Line[] };
 
 export const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
 export const easeOut = (p: number) => 1 - Math.pow(1 - clamp01(p), 3);
+/** Overshoots past 1, then settles. The house entrance easing (see components/Annotate Pop). */
+export const easeOutBack = (p: number) => {
+  p = clamp01(p);
+  return 1 + 2.2 * Math.pow(p - 1, 3) + 1.2 * Math.pow(p - 1, 2);
+};
 export const easeInOut = (p: number) => {
   p = clamp01(p);
   return p < 0.5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;

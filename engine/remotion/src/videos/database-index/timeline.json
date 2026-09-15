@@ -1,0 +1,113 @@
+{
+  "fps": 30,
+  "sample_rate": 24000,
+  "engine": "kokoro",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "gap": 0.35,
+  "lead": 0.4,
+  "tail": 0.9,
+  "total_duration": 32.17,
+  "lines": [
+    {
+      "i": 0,
+      "text": "Your database just checked 1 million rows to find 1.",
+      "spoken": "Your database just checked 1 million rows to find 1.",
+      "audio": "line_00_3b2f76a891.wav",
+      "engine": "kokoro",
+      "start": 0.4,
+      "end": 3.38,
+      "dur": 2.98
+    },
+    {
+      "i": 1,
+      "text": "Without an index, that is the only way it can look.",
+      "spoken": "Without an index, that is the only way it can look.",
+      "audio": "line_01_157fed9a2b.wav",
+      "engine": "kokoro",
+      "start": 3.73,
+      "end": 6.43,
+      "dur": 2.7
+    },
+    {
+      "i": 2,
+      "text": "An index is a sorted copy of one column.",
+      "spoken": "An index is a sorted copy of one column.",
+      "audio": "line_02_d16140f632.wav",
+      "engine": "kokoro",
+      "start": 6.78,
+      "end": 9.37,
+      "dur": 2.59
+    },
+    {
+      "i": 3,
+      "text": "Sorted means you can throw away half the rows every step.",
+      "spoken": "Sorted means you can throw away half the rows every step.",
+      "audio": "line_03_1c7fda5fcb.wav",
+      "engine": "kokoro",
+      "start": 9.72,
+      "end": 12.71,
+      "dur": 2.99
+    },
+    {
+      "i": 4,
+      "text": "Start in the middle: too big, drop everything below.",
+      "spoken": "Start in the middle: too big, drop everything below.",
+      "audio": "line_04_75a9ff6b9e.wav",
+      "engine": "kokoro",
+      "start": 13.06,
+      "end": 16.04,
+      "dur": 2.98
+    },
+    {
+      "i": 5,
+      "text": "Too small, drop everything above, and repeat.",
+      "spoken": "Too small, drop everything above, and repeat.",
+      "audio": "line_05_997be589f9.wav",
+      "engine": "kokoro",
+      "start": 16.39,
+      "end": 18.8,
+      "dur": 2.41
+    },
+    {
+      "i": 6,
+      "text": "20 of those halvings is enough for 1 million rows.",
+      "spoken": "20 of those halvings is enough for 1 million rows.",
+      "audio": "line_06_486f5a7f34.wav",
+      "engine": "kokoro",
+      "start": 19.15,
+      "end": 22.12,
+      "dur": 2.97
+    },
+    {
+      "i": 7,
+      "text": "So the lookup gets instant. The writes do not.",
+      "spoken": "So the lookup gets instant. The writes do not.",
+      "audio": "line_07_464f3f14f9.wav",
+      "engine": "kokoro",
+      "start": 22.47,
+      "end": 25.0,
+      "dur": 2.53
+    },
+    {
+      "i": 8,
+      "text": "Every insert has to keep the sorted copy sorted.",
+      "spoken": "Every insert has to keep the sorted copy sorted.",
+      "audio": "line_08_c33df1b221.wav",
+      "engine": "kokoro",
+      "start": 25.35,
+      "end": 28.25,
+      "dur": 2.9
+    },
+    {
+      "i": 9,
+      "text": "An index trades slower writes for a search that halves.",
+      "spoken": "An index trades slower writes for a search that halves.",
+      "audio": "line_09_5762616a3e.wav",
+      "engine": "kokoro",
+      "start": 28.6,
+      "end": 31.27,
+      "dur": 2.67
+    }
+  ]
+}

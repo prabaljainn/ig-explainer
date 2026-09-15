@@ -12,6 +12,12 @@ export const C = style.colors;
 export const F = style.font;
 export const SAFE = style.safe;
 export const STROKE = style.stroke;
+export const STARS = style.stars;
+export const GLOW = style.glow;
+
+/** Bloom for the hero object only. `k` 0..1 scales it, so a hero can light up as it becomes the subject. */
+export const glow = (color: string = C.hero, k = 1) =>
+  k <= 0 ? undefined : `drop-shadow(0 0 ${GLOW.blur * k}px ${color}${Math.round(GLOW.opacity * k * 255).toString(16).padStart(2, "0")})`;
 export const FONT = `${fontFamily}, ${style.font.fallback.join(", ")}`;
 
 /** Usable vertical band: everything a viewer must read lives between these. */

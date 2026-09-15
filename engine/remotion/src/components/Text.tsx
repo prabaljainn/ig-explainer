@@ -1,17 +1,28 @@
 import React from "react";
+import { useVideoConfig } from "remotion";
 import { C, CONTENT_MID, F, SAFE, WIDTH } from "../style";
 import { clamp01, easeOut, useT } from "../lib/timeline";
 
-/** Hook / takeaway statement, centred in the diagram area. Fades in over 10 frames (unless fade is false), then holds. */
-export const Headline: React.FC<{ text: React.ReactNode; size?: number; y?: number; width?: number; fade?: boolean }> = ({
+/**
+ * Hook / takeaway statement, centred in the diagram area. Fades in over 10 frames (unless fade is false).
+ * `fadeOut` is seconds of fade at the end of the enclosing <Beat>: without it the headline is unmounted by the
+ * Beat boundary and vanishes on a single frame, which is a hard cut at a narration line start. The takeaway
+ * leaves it at 0 on purpose - that one holds to the end of the video.
+ */
+export const Headline: React.FC<{
+  text: React.ReactNode; size?: number; y?: number; width?: number; fade?: boolean; fadeOut?: number;
+}> = ({
   text,
   size = F.headline,
   y = CONTENT_MID,
   width = WIDTH - 2 * SAFE.side,
   fade = true,
+  fadeOut = 0,
 }) => {
-  const { frame } = useT();
-  const p = fade ? easeOut(clamp01(frame / 10)) : 1;
+  const { frame, fps } = useT();
+  const { durationInFrames } = useVideoConfig(); // inside a Sequence this is the Sequence's own length
+  const p = (fade ? easeOut(clamp01(frame / 10)) : 1)
+    * (fadeOut ? clamp01((durationInFrames - frame) / (fadeOut * fps)) : 1);
   return (
     <div
       style={{

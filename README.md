@@ -80,13 +80,23 @@ re-run the narration, and the timing follows.
 Earth drawn during the hook is the same circle that gets ghosted under the takeaway forty seconds later. That
 continuity is how a viewer keeps the model in their head.
 
-**A look that holds.** True black, white ink, one typeface, one stroke weight, at most two type sizes on screen,
-and one optional accent colour per video. Every token lives in `brand/style.json`; nothing is hardcoded, so
-restyling the whole catalogue is one file. Icons, where a diagram needs them, are [Lucide](https://lucide.dev)
-line icons drawn at the same stroke weight as the diagram, never raster clip art.
+**A look that holds.** True black under a seeded starfield, white ink, one typeface, one stroke weight, at most
+two type sizes on screen. Colour has three jobs and no others: the `hero` object glows, `mark` is the ink of a
+hand-drawn arrow pointing at something, `badge` numbers a real sequence. Every token lives in `brand/style.json`;
+nothing is hardcoded, so restyling the whole catalogue is one file. Icons, where a diagram needs them, are
+[Lucide](https://lucide.dev) line icons drawn at the same stroke weight as the diagram, never raster clip art.
+`npx remotion render src/index.ts styleref out.mp4` renders every primitive, moving, in five seconds.
 
 **Private by default.** Narration runs locally on CPU via [Kokoro](https://github.com/hexgrad/kokoro) at roughly
 three seconds per line. Nothing leaves your machine unless you opt into a hosted voice.
+
+**One command per iteration.** `tools/build.sh <slug>` renders, muxes, writes the cover, builds a contact sheet
+and runs the gate in sixteen seconds. Nothing in the loop is slow except the judgement at the end of it.
+
+**A gate before the judge.** `tools/check.py` decides in four seconds everything a machine can be right about:
+the output contract, the script rules, frozen stretches, one-frame discontinuities at narration line starts, and
+colour left under the takeaway headline. The `video-critic` subagent costs six minutes and is for judgement, so
+it never spends a round on arithmetic.
 
 **Built for the phone it plays on.** Instagram's interface covers the top 260 px and bottom 340 px of a vertical
 frame. The safe area is a token, the critic enforces it, and the contact sheet shows you what a viewer sees.
